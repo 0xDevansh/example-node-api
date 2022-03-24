@@ -10,9 +10,9 @@ const app = express();
 app.use(helmet());
 app.use(
   rateLimit({
-    windowMs: 5 * 60 * 1000,
+    windowMs: 10 * 60 * 1000,
     max: 100,
-    message: 'Too many requests, please try again after 5 minutes',
+    message: 'Too many requests, please try again after 10 minutes',
     standardHeaders: true,
     legacyHeaders: false,
   })
